@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx" title="IIR Sized x2">
+
+    <fx:Script><![CDATA[
+        import vo.ListData;
+        ]]></fx:Script>
+
+    <s:navigationContent>
+        <s:Button click="navigator.popToFirstView()" label="Home"/>
+        <s:Button click="navigator.popView()" label="Back"/>
+    </s:navigationContent>
+
+    <s:layout>
+		<s:HorizontalLayout/>
+	</s:layout>
+	
+	<s:List width="50%"
+			height="100%"
+			dataProvider="{ListData.arrayList}"
+			horizontalScrollPolicy="off">
+		<s:itemRenderer>
+			<fx:Component>
+				<s:IconItemRenderer iconWidth="100" iconHeight="100" iconField="image">
+					<fx:Script><![CDATA[
+						override protected function createIconDisplay():void
+						{
+							super.createIconDisplay();
+							iconDisplay.smooth=true;
+						}
+					]]></fx:Script>
+					
+				</s:IconItemRenderer>
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+	<s:List width="50%"
+            height="100%"
+            dataProvider="{ListData.arrayList}"
+            horizontalScrollPolicy="off">
+        <s:itemRenderer>
+            <fx:Component>
+                <s:IconItemRenderer iconWidth="100" iconHeight="100" iconField="image">
+                    <fx:Script><![CDATA[
+                        override protected function createIconDisplay():void
+                        {
+                            super.createIconDisplay();
+                            iconDisplay.smooth=true;
+                        }
+                        ]]></fx:Script>
+
+                </s:IconItemRenderer>
+            </fx:Component>
+        </s:itemRenderer>
+    </s:List>
+</s:View>

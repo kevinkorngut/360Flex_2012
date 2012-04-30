@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:mx="library://ns.adobe.com/flex/mx"
+        title="Image Lists">
+    <fx:Script><![CDATA[
+        private function buttonClickHandler(event:MouseEvent):void {
+
+            var nextView:Class;
+
+            switch (event.target) {
+                case itemRendererListButton:
+                    nextView = List_ItemRenderer_Image_Percent;
+                    break;
+                case typicalItemListButton:
+                    nextView = List_TypicalItem_ItemRenderer_Image_Unsized;
+                    break;
+                case iconItemRenderListButton:
+                    nextView = List_IconItemRenderer_Sized;
+                    break;
+                case fxgListViewButton:
+                    nextView = FXG_ItemRenderer_Bitmap_Sized;
+                    break;
+                case transparencyViewButton:
+                    nextView = Transparency_View_Skinned_ItemRenderer;
+                    break;
+                default:
+                    break;
+            }
+
+            navigator.pushView(nextView);
+        }
+        ]]></fx:Script>
+
+	<s:layout>
+		<s:VerticalLayout verticalAlign="middle"
+                          horizontalAlign="center"
+                          gap="30"/>
+	</s:layout>
+
+    <s:Button id="itemRendererListButton"
+              label="ItemRenderers (IRs)"
+              click="buttonClickHandler(event)"
+              width="90%"/>
+
+    <s:Button id="typicalItemListButton"
+              label="TypicalItem IRs"
+              click="buttonClickHandler(event)"
+              width="90%"/>
+
+    <s:Button id="iconItemRenderListButton"
+              label="IconItemRenderers (IIRs)"
+              click="buttonClickHandler(event)"
+              width="90%"/>
+
+    <s:Button id="fxgListViewButton"
+              label="FXGs"
+              click="buttonClickHandler(event)"
+              width="90%"/>
+
+    <s:Button id="transparencyViewButton"
+              label="Transparency"
+              click="buttonClickHandler(event)"
+              width="90%"/>
+</s:View>

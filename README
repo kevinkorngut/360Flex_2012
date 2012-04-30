@@ -1,0 +1,17 @@
+What is this?
+=============
+
+A re-organized version of an application I used to demonstrate list
+performance/optimizations at 360|Flex 2012 in my "Optimizing Mobile
+Applications - So Easy a Designer Could Do It" talk.
+
+
+Word of Warning
+===============
+
+Some of the lists within this application will run very slowly; which
+is kind of the point. So just keep that in mind when you try and scrub
+one as there's a chance it might hang or crash. In particular, be
+careful of the first few views under "ItemRenderers (IRs). But if you're
+patient and move onto the next list in the sequence chances are it'll
+perform better than the previous one.
